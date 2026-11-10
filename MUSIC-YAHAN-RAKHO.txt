@@ -1,0 +1,8 @@
+Apni music file yahan 'birthday.mp3' naam se rakho (index.html ke saath, usi folder mein).
+
+Agar birthday.mp3 nahi rakhi to koi masla nahi: website khud ba khud
+"Happy Birthday" ki music-box wali dhun bajayegi.
+
+MIC KE LIYE: phone par mic tabhi chalta hai jab website https link par khuli ho
+(Netlify / GitHub Pages / Vercel wagaira). Agar mic na chale to cake ke neeche wala
+"tap karke bujhayein" button hamesha kaam karta hai.

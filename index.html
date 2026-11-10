@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14051c">
+<title>Happy Birthday Areeshaaa 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600;1,700&family=Great+Vibes&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgm" src="birthday.mp3" loop preload="auto"></audio>
+<div class="aurora" aria-hidden="true"><i></i><i></i></div>
+<div class="shoots" aria-hidden="true"><i style="--x:12%;--d:9s;--dl:1s"></i><i style="--x:55%;--d:13s;--dl:6s"></i><i style="--x:80%;--d:11s;--dl:3.5s"></i></div>
+<canvas id="bg"></canvas><canvas id="fx"></canvas>
+<div id="pkbg" aria-hidden="true"></div>
+<div id="sweep" aria-hidden="true"></div><div id="cnt">1/13</div><button id="mute" aria-label="Music on/off">🔊</button>
+
+<!-- 1 · VIP password gate + Envelope -->
+<section class="page on intro locked" id="intro">
+  <div class="vip" id="vip">
+    <div class="vip-card">
+      <div class="vip-in">
+        <div class="vip-crown" aria-hidden="true">👑</div>
+        <div class="lock-row" aria-hidden="true"><div class="gpk" data-k="bear"></div>
+        <div class="lock-wrap"><div class="rays"></div>
+          <div class="lock-ring"></div>
+          <div class="orbit"><i></i><i></i><i></i></div>
+          <svg class="lock" viewBox="0 0 64 72">
+            <defs><linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1c9"/><stop offset=".5" stop-color="#f0c273"/><stop offset="1" stop-color="#c8913f"/></linearGradient></defs>
+            <path class="shackle" d="M20 32V22a12 12 0 0 1 24 0v10" fill="none" stroke="url(#gl)" stroke-width="6" stroke-linecap="round"/>
+            <rect x="10" y="30" width="44" height="34" rx="9" fill="url(#gl)"/>
+            <circle cx="32" cy="45" r="5" fill="#4a1a3a"/><rect x="30" y="47" width="4" height="9" rx="2" fill="#4a1a3a"/>
+          </svg>
+        </div><div class="gpk r" data-k="bunny"></div></div>
+        <div class="vip-tag gt">VIP Pass</div>
+        <p class="vip-sub" id="vipSub">Areeshaaa, apna VIP code likhein</p>
+        <div class="pin" id="pin" aria-label="4 digit code"><i></i><i></i><i></i><i></i></div>
+        <div class="vip-hint" id="vipHint"></div>
+        <div class="pad" id="pad">
+          <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button>
+          <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button>
+          <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button>
+          <span></span><button data-k="0">0</button><button data-k="del" class="del" aria-label="Mitayein">⌫</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" id="reveal">
+    <div class="env-stage" id="envStage">
+    <div class="env-glow"></div>
+    <div class="env-hearts"><i style="--x:18%;--dl:0s">💖</i><i style="--x:45%;--dl:-1.2s">✨</i><i style="--x:70%;--dl:-2.1s">💕</i><i style="--x:32%;--dl:-3s">💗</i><i style="--x:82%;--dl:-.6s">✨</i></div>
+    <div class="env-pk" data-k="kitty"></div>
+    <div class="env" id="env">
+      <div class="env-back"></div>
+      <div class="env-card"><span>Areeshaaa ke liye 💌</span></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="seal" aria-label="Khol ke dekhein">A</button>
+    </div>
+    </div>
+    <h1>Ek chhota sa surprise,<br>sirf aap ke liye</h1>
+    <button class="btn" id="start">Khol ke dekhein</button>
+  </div>
+</section>
+
+<!-- 2 · Countdown + name -->
+<section class="page">
+  <div class="cd-stage">
+    <div class="cdw" id="cdw"><svg class="cd-prog" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46"/></svg><div class="ring"></div><div class="ring r2"></div><div class="burst"><i style="--a:0deg"></i><i style="--a:30deg"></i><i style="--a:60deg"></i><i style="--a:90deg"></i><i style="--a:120deg"></i><i style="--a:150deg"></i><i style="--a:180deg"></i><i style="--a:210deg"></i><i style="--a:240deg"></i><i style="--a:270deg"></i><i style="--a:300deg"></i><i style="--a:330deg"></i></div><div class="cdn" id="cd">3</div><div class="cd-cap" id="cdCap"></div></div>
+    <h1 class="title" id="ttl"><span class="hb">Happy Birthday</span><span class="name" id="nm"></span></h1>
+  </div>
+  <div class="cd-pks" id="cdPks"></div>
+</section>
+
+<!-- 3 · Gift box -->
+<section class="page">
+  <div class="gift-scene" id="giftScene">
+    <div class="beam"></div>
+    <div class="gshadow"></div>
+    <div class="gwrap" id="gwrap">
+      <div class="gift">
+        <div class="box" id="giftBox">
+          <i class="fr"></i><i class="bk"></i><i class="lf"></i><i class="rt"></i><i class="bt"></i><i class="gl"></i>
+        </div>
+        <div class="lid">
+          <i class="fr"></i><i class="bk"></i><i class="lf"></i><i class="rt"></i><i class="tp"></i>
+          <div class="bow"><b></b><b></b><s></s></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Aaj ka din sirf aap ka hai ✨</h2>
+  <p>Duniya ki saari khushiyan aaj aap ke naam, Areeshaaa 💕</p>
+</section>
+
+<!-- 4 · Cake -->
+<section class="page cake-page">
+  <h2>Candles par phoonk maariye 🎂</h2>
+  <div class="stage" id="stage">
+    <div class="room-glow" id="rg"></div>
+    <canvas id="cakeCv"></canvas>
+  </div>
+  <div class="ctl">
+    <button class="btn mic" id="mic">🎤 Mic on karein</button>
+    <div class="meter" id="meter" hidden><i id="mbar"></i></div>
+    <button class="link" id="blow">Mic nahi chal raha? Yahan tap karke bujhayein</button>
+  </div>
+  <div id="wm">Pehle mic on karein, phir candles par zor se phoonk maariye 🌬️</div>
+</section>
+
+<!-- 5 · Night sky -->
+<section class="page sky-page">
+  <h2>Aap ki har wish poori hogi ✨</h2>
+  <p>Dekhiye, aasman bhi aap ki khushi mein jashn mana raha hai 💖</p>
+  <div class="sky" aria-hidden="true">
+    <div class="stars" id="stars"></div>
+    <div class="moon"></div>
+    <svg class="city" id="city" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice"></svg>
+  </div>
+</section>
+
+<!-- 6 · Balloons -->
+<section class="page">
+  <h2>Ghubare phoriye 🎈</h2>
+  <p class="sub" id="bleft"></p>
+  <div class="arena" id="ar"></div>
+  <div id="bmsg"></div>
+</section>
+
+<!-- 7 · Hanging notes -->
+<section class="page">
+  <h2>Aap itni khaas kyun hain 💕</h2>
+  <div class="rows">
+    <div class="row">
+      <div class="note" style="--t:-2.5deg;--sw:4.6s;--sd:-1s"><b class="peg"></b><span>😊</span><p>Aap ki smile se din ban jata hai</p></div>
+      <div class="note" style="--t:2deg;--sw:5.2s;--sd:-2.4s"><b class="peg"></b><span>🤗</span><p>Aap dil ki bohat acchi hain</p></div>
+    </div>
+    <div class="row">
+      <div class="note" style="--t:1.8deg;--sw:5s;--sd:-.4s"><b class="peg"></b><span>✨</span><p>Aap jahan hoti hain wahan raunaq hoti hai</p></div>
+      <div class="note" style="--t:-2deg;--sw:4.8s;--sd:-3s"><b class="peg"></b><span>💖</span><p>Aap meri sab se pyari dost hain</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7b · Pookie dance party -->
+<section class="page party-page">
+  <h2>Pookie Dance Party 🪩</h2>
+  <p class="sub">Pookies ko tap karein, aap ke liye naachenge 💃</p>
+  <div class="pty" id="pty"><div class="pty-beam b1"></div><div class="pty-beam b2"></div><div class="pty-ball"></div><div class="pty-floor"></div><div class="pty-crew" id="ptyCrew"></div></div>
+  <button class="btn" id="ptyGo">🎶 Party shuru karein!</button>
+</section>
+
+<!-- 8 · VIP Lucky Wheel -->
+<section class="page wheel-page">
+  <h2>VIP Lucky Wheel 🎡</h2>
+  <p class="sub">Ghumayein aur apna birthday tohfa jeetein ✨</p>
+  <div class="wheel-wrap" id="wheelWrap">
+    <div class="w-glow"></div>
+    <div class="w-lights" id="wLights"></div>
+    <div class="w-ptr" id="wPtr"></div>
+    <svg class="wheel" id="wheel" viewBox="-100 -100 200 200"></svg>
+    <button class="w-hub" id="spin" aria-label="Wheel ghumayein">👑</button>
+  </div>
+  <div id="cmsg">Beech wale 👑 par tap karein</div>
+</section>
+
+<!-- 9 · Scratch surprises -->
+<section class="page">
+  <h2>Aap ke liye 3 surprise tohfay 🎁</h2>
+  <p class="sub">Ungli se scratch karke dekhein ✨</p>
+  <div class="vouch" id="vouch"></div>
+</section>
+
+<!-- 9b · VIP Award Night -->
+<section class="page award-page">
+  <h2>VIP Award Night 🏆</h2>
+  <p class="sub" id="awdSub">Parda uthane ke liye tap karein ✨</p>
+  <div class="awd" id="awd">
+    <div class="awd-beam a1"></div><div class="awd-beam a2"></div><div class="awd-beam a3"></div>
+    <div class="awd-stage">
+      <div class="awd-rays"></div>
+      <svg class="awd-trophy" viewBox="0 0 100 130" aria-hidden="true">
+        <defs><linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7de"/><stop offset=".45" stop-color="#f0c273"/><stop offset="1" stop-color="#b9893a"/></linearGradient></defs>
+        <path d="M22 20C4 20 4 52 30 56M78 20C96 20 96 52 70 56" fill="none" stroke="url(#tg)" stroke-width="6" stroke-linecap="round"/>
+        <path d="M24 12h52c0 34-8 54-26 58C32 66 24 46 24 12z" fill="url(#tg)"/>
+        <path d="M34 18c0 24 4 38 12 44" stroke="#fff" stroke-opacity=".65" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <path d="M50 70v22" stroke="url(#tg)" stroke-width="9"/><path d="M36 92h28l4 12H32z" fill="url(#tg)"/><rect x="26" y="104" width="48" height="16" rx="4" fill="url(#tg)"/>
+        <path d="M50 26l4.5 9.5 10.5 1.3-7.7 7.2 2 10.4-9.3-5.2-9.3 5.2 2-10.4-7.7-7.2 10.5-1.3z" fill="#fff6d6" opacity=".95"/>
+      </svg>
+      <div class="awd-plate"><small>Aaj ki</small><b>Best Friend &amp; Queen</b><em>Areeshaaa 👑</em></div>
+    </div>
+    <div class="curt l"></div><div class="curt r"></div>
+    <div class="awd-fl" id="awdF"></div>
+  </div>
+  <button class="btn" id="awdGo">🎬 Parda uthayein</button>
+</section>
+
+<!-- 10 · Letter -->
+<section class="page">
+  <h2>Dil se ek chhoti si baat 💌</h2>
+  <div class="paper" id="paper">
+    <p class="hand" id="typed"></p>
+    <div class="sign">— Your Bestest Friend 💖</div>
+  </div>
+</section>
+
+<!-- 12 · Finale -->
+<section class="page fin">
+  <div class="bunting" aria-hidden="true"></div>
+  <div class="floaters" aria-hidden="true"><span style="--x:6%;--s:2.2rem;--d:11s;--dl:-0s">🎈</span><span style="--x:18%;--s:1.4rem;--d:14s;--dl:-5s">✨</span><span style="--x:30%;--s:2rem;--d:12s;--dl:-2s">🎉</span><span style="--x:44%;--s:1.5rem;--d:15s;--dl:-8s">💖</span><span style="--x:58%;--s:2.3rem;--d:13s;--dl:-4s">🎈</span><span style="--x:70%;--s:1.4rem;--d:16s;--dl:-1s">✨</span><span style="--x:82%;--s:2rem;--d:12s;--dl:-7s">🎈</span><span style="--x:92%;--s:1.6rem;--d:14s;--dl:-3s">💖</span></div>
+  <svg class="heart" viewBox="0 0 100 90" aria-hidden="true">
+    <defs><radialGradient id="hg" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#ffb3c8"/><stop offset=".5" stop-color="#ff3d79"/><stop offset="1" stop-color="#a80f44"/></radialGradient></defs>
+    <path d="M50 84C20 62 4 46 4 28 4 14 15 5 28 5c9 0 17 5 22 13C55 10 63 5 72 5c13 0 24 9 24 23 0 18-16 34-46 56z" fill="url(#hg)"/>
+    <path d="M22 20c4-6 11-8 16-5" stroke="#fff" stroke-opacity=".7" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </svg>
+  <h1 class="title show"><span class="hb">Happy Birthday</span><span class="name" id="nm2"></span></h1>
+  <p>Hamesha khush rahein, hamesha muskuraati rahein 💖</p>
+  <div class="fin-pks" id="finPks"></div>
+  <button class="btn" id="again">Dobara dekhein 🔁</button>
+</section>
+
+<button id="bk" aria-label="Peeche">←</button><button id="nx">Aage →</button>
+
+<script src="three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
